@@ -1,3 +1,4 @@
+# THIS FILE IS DEPRECATED
 from const import *
 from funcs import *
 
