@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}" />
+
+    <!-- bootstrap link -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+
+    <!-- Google charts Link -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- jQuery Cdn Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet"  href="{{ url_for('static', filename='style.css') }}"/>
+
+  <!-- For loading external data files -->
+  <script src="{{ url_for('static', filename='polyfill.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='cytoscape.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='chart.js') }}"></script>
+
+  <!-- bootstrap script  for modal-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<style>
+
+  /* style for modal */
+
+  #modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#modal-content {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+}
+
+#modal-content #temp {
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+
+.tooltip-paragraph {
+  font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="container_">
+
+    <section class="main_">
+      <div class="users_">
+        <div class="card_ c1_">
+
+          <p>82100 Benevento BN</p>
+          <br>
+          <p style="color:red">OFFLINE</p>
+            <br>
+          <button>About...</button>
+          
+
+
+        </div>
+        <div class="card_ c2_">
+          <h2>Condition</h2>
+          <hr>
+          <p id="avg_temp">Temperature: undefined</p>
+          <p id="avg_humidity">Humidity: undefined</p>
+          <p id="avg_ir">IR: undefined</p>
+          <p id="avg_vis">Vis: undefined</p>
+          <p id="avg_batt">Battery: undefined</p>
+        </div>
+        <div class="card_ c3_">
+            <h2>Status</h2>
+            <hr>
+            <h1>OK</h1>
+            <div class="warnings">
+                <h4>Warnings:</h4>
+                <p>01-12-22 12:05:43 Server has stopped</p>
+                <hr>
+                <p>01-12-22 12:05:43 Battery died</p>
+                <hr>
+            </div>
+            
+        </div>
+        <a href="settings" target="_blank">
+            <!-- <img src="icns/gear_icon.png" alt="gear_icon" width="30" height="30"> -->
+        </a>
+      </div>
+      
+
+    </section>
+  </div>
+  <div class="container2" id="container2">
+    <h1>Node Info</h1>
+    <section class="main_">
+      <div class="users_">
+        <div class="card_ c1_">
+
+          <p id="nodeID">Node ID: undefined</p>
+          <p id="nodeIP">IP: undefined</p>
+          <p id="nodeRLOC">Rloc16: undefined</p>
+          <p id="nodeROLE">Role: undefined</p>
+          <p id="nodeBATTERY">Battery: <pre>undefined</pre></p>
+
+
+        </div>
+        <div class="card_ c2_">
+          <h2>Measuraments</h2>
+          <hr>
+          <p class="measure" id="nodeTEMP">Temperature: undefined</p>
+          <p id="nodeHUMIDITY" class="measure">Humidity: undefined</p>
+          <p id="nodeIR" class="measure">IR: undefinde</p>
+          <p id="nodeVIS" class="measure">Vis: undefined</p>
+          <hr>
+          <br>
+          <p id="open-graph">Open Graph</p>
+        </div>
+        <div class="modal">
+ <!-- Button trigger modal -->
+ <div id="modal-container" style="visibility: hidden;">
+   <div id="modal-content">
+     <div id="temp"></div>
+     <button id="close-modal-button">Close</button>
+   </div>
+ </div>
+ 
+ 
+ <script >
+   // script for modal
+   document.getElementById("open-graph").addEventListener("click", function() {
+   document.getElementById("modal-container").style.visibility = "visible";
+ });
+ 
+ document.getElementById("close-modal-button").addEventListener("click", function() {
+   document.getElementById("modal-container").style.visibility = "hidden";
+ });
+ 
+ </script>
+        </div>
+          <div class="card_ c3_" id="c3_">            
+        </div>
+      </div>
+      
+
+    </section>
+  </div>
+  <div>
+    <div class="graphs" id="graphs">
+
+    </div>
+  <div class="scroller">
+    <select name="dates" id="dates" oninput="selectDate(this.value)">
+      {% for dir in dirs %}
+        <option value="{{dir}}">{{dir}}</option>
+      {% endfor %}
+    </select>
+    <script>$("#dates").val("{{folder_path}}");</script>
+    <input type="range" min="1" max="100" value="100" class="slider" id="myRange" oninput="scrollerInput(this.value)">
+    <label id="lab">undefined</label>
+  </div>
+  <div class="poll_button" id="poll_now_button" onclick="poll_now()">
+    Poll Now
+    <p>auto poll in <span></span></p>
+    
+  </div>
+  <label id="auto_polling_label">
+    <input type="checkbox" id="disable_polling" name="polling" value="enable" onchange="autoPoll_changed(this)"> Auto Polling
+  </label>
+  <script>
+      $("#disable_polling").prop("checked", {{settings["auto_poll"]}}); // set the checkbox whe
+  </script>
+    </div>
+  <script>
+        var timer = {{settings['poll_interval']}};
+        var timer2 = timer;
+        setInterval(function()
+        {
+          timer--;
+          if ($("#disable_polling").prop("checked"))
+          {
+            if (timer <= 0) 
+            {
+              $(".poll_button p span").text("0");  
+              $(".poll_button").trigger("click");
+              timer = timer2;
+            }else
+              $(".poll_button p span").text(convertSecondsToMinutes(timer));
+          }else
+            timer = timer2
+        }, 1000);
+
+    </script>
+  <!-- Load application code at the end to ensure DOM is loaded -->
+  <script src="{{ url_for('code') }}"></script>
+
+</body>
+</html>

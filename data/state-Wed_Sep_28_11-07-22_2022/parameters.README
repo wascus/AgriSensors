@@ -1,0 +1,8 @@
+Documentation global parameters.csv: the columns are position dependent
+
+freq_polling: period (in seconds) of each poll (you will need a different one if you want different frequency per sensor)
+last_seen_times: last seen threshold (integer) how many past discoveries have been used
+freq_discovery: period (in seconds) of pinging for new nodes
+freq_node_read: period (in seconds) between measures
+coap_timeout: coap timeout in seconds to break reading operation 
+freq_diagnostics: run diagnostics every freq_diagnostics * freq_discovery seconds. freq_diagnostics HAS TO BE AN INTEGER!

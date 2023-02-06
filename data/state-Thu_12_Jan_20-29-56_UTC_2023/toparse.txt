@@ -1,0 +1,24 @@
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:c000: 0880fd3093d79154b7c2000000fffe00fc11fd3093d79154b7c2000000fffe00fc10fd3093d79154b7c2000000fffe00fc38fdab89de3e01e45fc90c5b2ad13c52bdfd3093d79154b7c2000000fffe00fc00fd3093d79154b7c2000000fffe00c000fd3093d79154b7c278c5aabc46c77193fe8000000000000048ada799085c7659100360020f
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc11
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc10
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc38
+    - fdab:89de:3e01:e45f:c90c:5b2a:d13c:52bd
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc00
+    - fd30:93d7:9154:b7c2:0:ff:fe00:c000
+    - fd30:93d7:9154:b7c2:78c5:aabc:46c7:7193
+    - fe80:0:0:0:48ad:a799:85c:7659
+Child Table:
+    - ChildId: 0x0002
+      Timeout: 12
+      Mode:
+          RxOnWhenIdle: 1
+          DeviceType: 1
+          NetworkData: 1
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:c102: 0840fd3093d79154b7c2000000fffe00c102fdab89de3e01e45fabc6fb7f9f4c918ffd3093d79154b7c209204e281afc00defe80000000000000dcef2d722d66a6f7
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:c102
+    - fdab:89de:3e01:e45f:abc6:fb7f:9f4c:918f
+    - fd30:93d7:9154:b7c2:920:4e28:1afc:de
+    - fe80:0:0:0:dcef:2d72:2d66:a6f7
+Done

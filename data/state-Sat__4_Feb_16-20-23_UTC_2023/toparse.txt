@@ -1,0 +1,80 @@
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:c804: 0870fdab89de3e01e45fc90c5b2ad13c52bdfd3093d79154b7c2000000fffe00fc11fd3093d79154b7c2000000fffe00fc10fd3093d79154b7c2000000fffe00fc38fd3093d79154b7c2000000fffe00c804fd3093d79154b7c278c5aabc46c77193fe8000000000000048ada799085c7659
+IP6 Address List:
+    - fdab:89de:3e01:e45f:c90c:5b2a:d13c:52bd
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc11
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc10
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc38
+    - fd30:93d7:9154:b7c2:0:ff:fe00:c804
+    - fd30:93d7:9154:b7c2:78c5:aabc:46c7:7193
+    - fe80:0:0:0:48ad:a799:85c:7659
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:c800: 0850fdab89de3e01e45fabc6fb7f9f4c918ffd3093d79154b7c2000000fffe00fc00fd3093d79154b7c2000000fffe00c800fd3093d79154b7c25847d498cf93d156fe800000000000002456c0a082828264100360040f
+IP6 Address List:
+    - fdab:89de:3e01:e45f:abc6:fb7f:9f4c:918f
+    - fd30:93d7:9154:b7c2:0:ff:fe00:fc00
+    - fd30:93d7:9154:b7c2:0:ff:fe00:c800
+    - fd30:93d7:9154:b7c2:5847:d498:cf93:d156
+    - fe80:0:0:0:2456:c0a0:8282:8264
+Child Table:
+    - ChildId: 0x0004
+      Timeout: 12
+      Mode:
+          RxOnWhenIdle: 1
+          DeviceType: 1
+          NetworkData: 1
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:b400: 0840fdab89de3e01e45fffa54090c4caec2afd3093d79154b7c2000000fffe00b400fd3093d79154b7c2f7bc5d74d9c43570fe800000000000006406ffa86b0e70c21000
+IP6 Address List:
+    - fdab:89de:3e01:e45f:ffa5:4090:c4ca:ec2a
+    - fd30:93d7:9154:b7c2:0:ff:fe00:b400
+    - fd30:93d7:9154:b7c2:f7bc:5d74:d9c4:3570
+    - fe80:0:0:0:6406:ffa8:6b0e:70c2
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:a800: 0840fdab89de3e01e45f9ef0fe94992430a8fd3093d79154b7c2000000fffe00a800fd3093d79154b7c2cbd4bd38a68765f8fe800000000000005862b9bb7076f22e1000
+IP6 Address List:
+    - fdab:89de:3e01:e45f:9ef0:fe94:9924:30a8
+    - fd30:93d7:9154:b7c2:0:ff:fe00:a800
+    - fd30:93d7:9154:b7c2:cbd4:bd38:a687:65f8
+    - fe80:0:0:0:5862:b9bb:7076:f22e
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:c00: 0840fd3093d79154b7c2000000fffe000c00fdab89de3e01e45fbb64ec5f438480f0fd3093d79154b7c23f39906a4dd69ea1fe80000000000000942fbc1e994018721000
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:c00
+    - fdab:89de:3e01:e45f:bb64:ec5f:4384:80f0
+    - fd30:93d7:9154:b7c2:3f39:906a:4dd6:9ea1
+    - fe80:0:0:0:942f:bc1e:9940:1872
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:5400: 0840fd3093d79154b7c2000000fffe005400fdab89de3e01e45fd3c819838e4fbe2ffd3093d79154b7c208618de6c5d60d86fe80000000000000c066ec92f28fff471000
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:5400
+    - fdab:89de:3e01:e45f:d3c8:1983:8e4f:be2f
+    - fd30:93d7:9154:b7c2:861:8de6:c5d6:d86
+    - fe80:0:0:0:c066:ec92:f28f:ff47
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:6400: 0840fdab89de3e01e45f4fb2d2fa6d2742c9fd3093d79154b7c2000000fffe006400fd3093d79154b7c20e1d1adc8f548f1afe800000000000007c0bddf2a2796ed81000
+IP6 Address List:
+    - fdab:89de:3e01:e45f:4fb2:d2fa:6d27:42c9
+    - fd30:93d7:9154:b7c2:0:ff:fe00:6400
+    - fd30:93d7:9154:b7c2:e1d:1adc:8f54:8f1a
+    - fe80:0:0:0:7c0b:ddf2:a279:6ed8
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:e000: 0840fd3093d79154b7c2000000fffe00e000fdab89de3e01e45f5576d7e156317abafd3093d79154b7c251f307fb9128b080fe8000000000000020e9c69faca9a7d91000
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:e000
+    - fdab:89de:3e01:e45f:5576:d7e1:5631:7aba
+    - fd30:93d7:9154:b7c2:51f3:7fb:9128:b080
+    - fe80:0:0:0:20e9:c69f:aca9:a7d9
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:7c00: 0840fd3093d79154b7c2000000fffe007c00fdab89de3e01e45f6ecf05334fcbe760fd3093d79154b7c2b06929176e3f6abffe80000000000000f8d9ac92e9c629a71000
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:7c00
+    - fdab:89de:3e01:e45f:6ecf:533:4fcb:e760
+    - fd30:93d7:9154:b7c2:b069:2917:6e3f:6abf
+    - fe80:0:0:0:f8d9:ac92:e9c6:29a7
+Child Table:
+DIAG_GET.rsp/ans from fd30:93d7:9154:b7c2:0:ff:fe00:e800: 0840fd3093d79154b7c2000000fffe00e800fdab89de3e01e45f74dfe29439b129c4fd3093d79154b7c2267d99991bea6e4cfe8000000000000090a7be17ad7e5b8f1000
+IP6 Address List:
+    - fd30:93d7:9154:b7c2:0:ff:fe00:e800
+    - fdab:89de:3e01:e45f:74df:e294:39b1:29c4
+    - fd30:93d7:9154:b7c2:267d:9999:1bea:6e4c
+    - fe80:0:0:0:90a7:be17:ad7e:5b8f
+Child Table:
+Done

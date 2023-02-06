@@ -1,0 +1,16 @@
+[Unit]
+Description=Ping OpenThread nodes
+Requires=initializeOT.service
+After=initializeOT.service
+StartLimitIntervalSec=0
+
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+User=pi
+ExecStart=/home/pi/pingnodes.sh
+
+[Install]
+WantedBy=multi-user.target

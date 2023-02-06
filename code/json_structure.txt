@@ -1,0 +1,125 @@
+json structure:
+
+[
+    {
+        time: x,
+        responses:
+                [
+                    {
+                        ext_address: x,
+                        rloc16: x,
+                        mode: 
+                            {   
+                                RxOnWhenIdle: x
+                                DeviceType: x
+                                NetworkData: x
+                            },
+                        connectivity:
+                            {
+                                ParentPriority: x
+                                LinkQuality3: x
+                                LinkQuality2: x
+                                LinkQuality1: x
+                                LeaderCost: x
+                                IdSequence: x
+                                ActiveRouters: x
+                                SedBufferSize: x
+                                SedDatagramCount: x
+                            },
+                        route:
+                            {
+                                IdSequence: x
+                                RouteData: 
+                                    [
+                                        {
+                                            RouteId: x
+                                            LinkQualityOut: x
+                                            LinkQualityIn: x
+                                            RouteCost: x
+                                        },
+                                        ...
+                                    ]
+                            },
+                        leader_data:
+                                {
+                                    PartitionId: x
+                                    Weighting: x
+                                    DataVersion: x
+                                    StableDataVersion: x
+                                    LeaderRouterId: x
+                                },
+                        network_data: x,
+                        ip6_address_list:
+                                [
+                                    ip1,
+                                    ...
+                                ],
+                        mac_counters:
+                                {
+                                    IfInUnknownProtos: x
+                                    IfInErrors: x
+                                    IfOutErrors: x
+                                    IfInUcastPkts: x
+                                    IfInBroadcastPkts: x
+                                    IfInDiscards: x
+                                    IfOutUcastPkts: x
+                                    IfOutBroadcastPkts: x
+                                    IfOutDiscards: x
+                                },
+                        child_table:
+                                [
+                                    {
+                                        ChildId: x
+                                        Timeout: x
+                                        Mode:
+                                            {
+                                                RxOnWhenIdle: x
+                                                DeviceType: x
+                                                NetworkData: x
+                                            }
+                                    },
+                                    ...
+                                ]
+                    },
+                    ...
+                ],
+        router_table:
+                [
+                    {
+                        RouterId: x
+                        Rloc16: x
+                        NextHop: x
+                        PathCost: x
+                        LQIIn: x
+                        LQIOut: x
+                        Age: x
+                        extended_mac: x
+                        link: x
+                    },
+                    ...
+                ],
+        neighbor_table:
+                [
+                    {
+                        role: x
+                        Rloc16: x
+                        Age: x
+                        average_rssi: x
+                        last_rssi: x
+                        r: x
+                        d: x
+                        n: x
+                        extended_mac: x
+                    },
+                    ...
+                ],
+        other:
+            {}
+    },
+
+    .
+    .
+    .
+
+
+]

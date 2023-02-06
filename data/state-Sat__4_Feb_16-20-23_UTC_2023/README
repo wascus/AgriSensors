@@ -1,0 +1,42 @@
+File Description
+
+--
+Services running (and corresponding -> file output)
+
+otbr-agent.service (default one, not included in the dump)
+This is the default border router services that includes the ot-ctl code
+
+initializeOT.service
+Service that run once and initialize the network -> MLP, myip, multicastIP
+
+pingnodes.service
+Node discovery service -> toparse.txt, diagnostics.log, routersANDchildren.csv
+
+poll.service
+Node polling service -> to_poll.csv, polled.csv
+
+
+--
+Files (the important ones). They can be static (don't change between sessions), dynamic (change because they get updated when needed), or cumulative (they aggregate information over time)
+parameters.README:	(static) schema for parameters.csv
+parameters.csv:		(dyn) parameters
+
+
+MLP:			(static) mesh local prefix (needs to be cleaned of surrounding text)
+myip:			(static) mleid IP of the raspberry pi
+multicastIP:		(static) multicast IP
+toparse.txt:		(dyn) network information (only ips). It accumulates up to last_seen_times and then resets. It runs every freq_discovery seconds
+diagnostics.log:	(cumulative) full network information. Collected only after freq_diagnostics times the discovery is made (so every freq_discovery * freq_diagnostics seconds)
+to_poll.csv:		(syn) list of nodes that will be interrogated. Nodes that did not respond in the last last_seen_times will not be polled. Also the raspberry pi will not be polled as it doesn't have sensors
+polled.csv:		(cumulative) sensors readings (timestamp is unix UTC)
+EUI_ID.csv:		(static) mapping between node ID and EUI
+nodePositions.csv:	(static) node GPS positions 
+
+TODO
+* log startup
+* make initialize logging
+* compare EUI csv table to keep track of who's missing
+* -45.0
+* database?
+* polled.csv reset at boot (save previous one)
+* use logrotate to prevent space issues with logs

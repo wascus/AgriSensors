@@ -1,0 +1,16 @@
+[Unit]
+Description=Run once
+After=local-fs.target
+After=network.target
+Before=poll.service
+
+[Service]
+ExecStartPre=/bin/sleep 10
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/initialize.sh
+TimeoutStartSec=240
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

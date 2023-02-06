@@ -1,0 +1,22 @@
+<button id="get-time-button">Get time</button>
+<div id="time">Time will be displayed here</div>
+<script>
+    const button = document.getElementById('get-time-button');
+    button.addEventListener('click', function() 
+    {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/get_time');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          const time = xhr.responseText;
+          document.getElementById('time').innerHTML = time;
+        }
+      };
+      xhr.send();
+    });
+  </script>
+  
+  
+  
+  

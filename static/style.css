@@ -1,0 +1,78 @@
+body {
+    font-family: helvetica;
+    font-size: 14px;
+  }
+  
+  .cy {
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: block;
+    /* background-image: url("Schermata 2022-12-16 alle 11.42.21 AM.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center; */
+  }
+
+.overlay {
+  position: absolute;
+    bottom: 40%;
+    /* center horizontally*/
+    left: 5%;
+}
+
+.scroller {
+    position: absolute;
+    bottom: 30%;
+    /* center horizontally*/
+    left: 10%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+.scroller input {
+    width: 400px;
+    display: block;
+  }
+
+.scroller label {
+    display: block;
+    margin: 10px;
+    text-align: center;
+  }
+
+.scroller select {
+    width: 400px;
+    display: block;
+    margin: 10px;
+    text-align: center;
+  }
+
+.poll_button {
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+.poll_button p {
+    font-size: 0.7em;
+  }
+
+#auto_polling_label {
+    /* place it below the poll_button */
+    position: absolute;
+    bottom: 6%;
+    left: 18%;
+    font-size: 0.7em;
+
+  }

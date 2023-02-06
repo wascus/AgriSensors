@@ -1,0 +1,17 @@
+[Unit]
+Description=Poll nodes
+Requires=pingnodes.service
+After=initializeOT.service
+StartLimitIntervalSec=0
+
+
+[Service]
+WorkingDirectory=/home/pi
+Type=simple
+Restart=always
+RestartSec=5s
+User=pi
+ExecStart=/home/pi/poll.py
+
+[Install]
+WantedBy=multi-user.target
